@@ -1,0 +1,6 @@
+cp www.tgz /user/share/nginx/
+cp tftpboot.tgz /
+cp default /etc/nginx/sites-available/default
+cp dhcpd.conf /etc/dhcp/dhcpd.conf
+cp tftpd-hpa /etc/default/tftpd-hpa
+cp preseed.cfg /usr/share/nginx/www/ubuntu/install/preseed.cfg 

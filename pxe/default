@@ -1,0 +1,18 @@
+# /etc/nginx/sites-enagled/default-->/etc/nginx/sites-available/default 
+server {
+	listen 8080 default_server;
+	listen [::]:8080 default_server ipv6only=on;
+	root /usr/share/nginx/www/;
+	index index.html index.htm;
+	server_name localhost;
+	location / {
+		try_files $uri $uri/ /index.html;
+	}
+	location /doc/ {
+		alias /usr/share/doc/;
+		autoindex on;
+		allow 127.0.0.1;
+		allow ::1;
+		deny all;
+	}
+}
